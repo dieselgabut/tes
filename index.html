@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesawatku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1>Pesawat<span>ku</span></h1>
+            <p>Platform Pembelian Tiket Pesawat Terpercaya</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h3>✈️ Form Pemesanan</h3>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Pilih Rute & Maskapai</label>
+                    <select id="rute" required>
+                        <option value="" disabled selected>-- Pilih Rute Dan Maskapai--</option>
+                        <option value="Jakarta - Bali" data-harga="2500000" data-maskapai="Garuda Indonesia">Jakarta - Denpasar (Garuda Indonesia)</option>
+                        <option value="Jakarta - Bali" data-harga="800000" data-maskapai="Garuda Indonesia">Yogyakarta - Bandung (Garuda Indonesia)</option>
+                        <option value="Bandung - Surabaya" data-harga="1000000" data-maskapai="Citilink">Bandung - Surabaya (Citilink)</option>
+                        <option value="Bandung - Surabaya" data-harga="2300000" data-maskapai="Citilink">Balikpapan - Padang (Citilink)</option>
+                        <option value="Jakarta - Singapore" data-harga="4000000" data-maskapai="Singapore Airlines">Jakarta - Singapore (Singapore Airlines)</option>
+                         <option value="Jakarta - Singapore" data-harga="5000000" data-maskapai="Singapore Airlines">Singapore - Denpasar (Singapore Airlines)</option>
+                        <option value="Medan - Jakarta" data-harga="1500000" data-maskapai="Batik Air">Medan - Jakarta (Batik Air)</option>
+                        <option value="Medan - Jakarta" data-harga="4500000" data-maskapai="Batik Air">Semarang - Batam (Batik Air)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Jam Keberangkatan</label>
+                    <select id="jam" required>
+                        <option value="" disabled selected>-- Pilih Jam --</option>
+                        <option value="07:00 WIB">07:00 WIB (Pagi)</option>
+                        <option value="13:30 WIB">13:30 WIB (Siang)</option>
+                        <option value="19:00 WIB">19:00 WIB (Malam)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <select id="metode" required>
+                        <option value="" disabled selected>-- Pilih Metode --</option>
+                        <option value="Transfer Bank (VA)">Transfer Bank (VA)</option>
+                        <option value="E-Wallet (OVO/Gopay)">E-Wallet (OVO/Gopay)</option>
+                        <option value="Kartu Kredit">Kartu Kredit</option>
+                        <option value="Gerai Retail (Alfamart/Indomaret)">Gerai Retail</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Jumlah Tiket</label>
+                    <input type="number" id="jumlah" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Harga (Otomatis)</label>
+                    <input type="text" id="totalTampilan" class="total-input" value="Rp 0" readonly>
+                </div>
+
+                <button type="submit">PESAN SEKARANG!</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>📋 Ringkasan Tiket</h3>
+            <div id="summaryContent">
+                <p class="placeholder-text">Silakan lengkapi form untuk mencetak rincian.</p>
+            </div>
+            
+            <div class="info-box">
+                <strong>Informasi Layanan:</strong>
+                <p>Pesawatku merupakan platform perantara tiket pesawat. E-Tiket akan diterbitkan setelah pembayaran terverifikasi sistem.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="about-section">
+        <div class="about-container">
+            <h3>Tentang Kami</h3>
+            <p><strong>Pesawatku</strong> adalah layanan perantara tiket pesawat digital. Kami membantu penumpang menemukan pilihan penerbangan terbaik dari berbagai maskapai dalam satu platform yang simpel.</p>
+            <p><h3>Partner kami</h3></p>
+            <p>Garuda Indonesia</p>
+            <p>Singapore airlines</p>
+            <p>Batik Air</p>
+            <p>Citilink</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
